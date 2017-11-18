@@ -1,10 +1,6 @@
 ﻿using DapperExample.Data;
 using DapperExample.Data.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DapperExample.Console
 {
@@ -14,11 +10,11 @@ namespace DapperExample.Console
 
         static void Main(string[] args)
         {
-            CreateNewCustomer();
+            //CreateNewCustomer();
 
-            //GetCustomer("Jack");
+            GetCustomer("Jack");
 
-            GetAll("Jack");
+            //GetAll("Jack");
 
             System.Console.ReadKey();
         }
@@ -34,7 +30,9 @@ namespace DapperExample.Console
         {
             var customer = _repository.GetByName(name);
 
-            DisplayCustomer(customer);
+            var customer2 = _repository.GetById(1);
+
+            DisplayCustomer(customer2);
         }
 
         public static void GetAll(string name)

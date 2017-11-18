@@ -19,5 +19,7 @@ namespace DapperExample.Data.Models
         public string Name { get; private set; }
 
         public DateTime Born { get; private set; }
+
+        public Address Address { get; set; }
     }
 }
